@@ -3,7 +3,18 @@
         var body = document.getElementById('express-admin'),
             navbar = document.getElementById('navbar'),
             layout = localStorage.getItem('layout') || 'fixed';
-        body.className = navbar.className = 
+        body.className = navbar.className =
             (layout == 'fixed') ? 'container' : 'container container-fluid';
+        var button = document.createElement('button');
+        debugger
+        button.innerHTML = 'print';
+        button.onclick = function(){
+          alert('here be dragons');return false;
+          debugger
+        };
+        // where do we want to have the button to appear?
+        // you can append it to another element just by doing something like
+        // document.getElementById('foobutton').appendChild(button);
+        document.body.appendChild(button);
     }());
 </script>
